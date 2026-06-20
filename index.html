@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f9fc;
+            color: #333333;
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+        }
+        .bg-lightblue { background-color: #e3f2fd; }
+        .text-lightblue { color: #0076a8; }
+        .btn-lightblue { background-color: #0084c2; color: white; }
+        .btn-lightblue:hover { background-color: #006696; color: white; }
+
+        /* 導覽按鈕客製化 */
+        .nav-pills .nav-link {
+            color: #495057;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .nav-pills .nav-link:hover { background-color: #e3f2fd; color: #0076a8; }
+        .nav-pills .nav-link.active { background-color: #0076a8; color: white; }
+
+        .card { border: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); border-radius: 12px; }
+        .profile-img { max-width: 200px; border-radius: 50%; border: 4px solid #e3f2fd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        footer { background-color: #0076a8; color: white; }
+
+        /* 淡入動畫效果 */
+        .tab-pane { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-lightblue sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-lightblue fw-bold" href="#">我的個人網站</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="nav nav-pills" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab">關於我 & 教育背景</button>
+                    <button class="nav-link" id="nav-experience-tab" data-bs-toggle="tab" data-bs-target="#nav-experience" type="button" role="tab">經驗與技能</button>
+                    <button class="nav-link" id="nav-projects-tab" data-bs-toggle="tab" data-bs-target="#nav-projects" type="button" role="tab">專案與活動</button>
+                    <button class="nav-link" id="nav-articles-tab" data-bs-toggle="tab" data-bs-target="#nav-articles" type="button" role="tab">專業見解</button>
+                    <button class="nav-link" id="nav-awards-tab" data-bs-toggle="tab" data-bs-target="#nav-awards" type="button" role="tab">獲獎榮譽</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card p-4 bg-white">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    <img src="images/me.jpg" alt="陳虹華" class="img-fluid profile-img" style="width: 180px; height: 180px; object-fit: cover;">
+                </div>
+                <div class="col-md-9 px-md-4">
+                    <h2 class="fw-bold text-lightblue mb-1">陳虹華 (Chen, Hong-Hua)</h2>
+                    <p class="text-muted mb-2">國立聯合大學 資訊管理學系 二年級</p>
+                    <hr class="my-2">
+                    <div class="row g-2 small">
+                        <div class="col-sm-6"><strong><i class="bi bi-geo-alt-fill text-lightblue"></i> 所在地：</strong>臺灣苗栗市恭敬里聯大一號</div>
+                        <div class="col-sm-6"><strong><i class="bi bi-envelope-fill text-lightblue"></i> Email：</strong>a0984466998@gmail.com</div>
+                        <div class="col-sm-6"><strong><i class="bi bi-mortarboard-fill text-lightblue"></i> 主修專業：</strong>資訊科技與商業管理</div>
+                        <div class="col-sm-6"><strong><i class="bi bi-heart-fill text-lightblue"></i> 興趣：</strong>聽音樂、跳舞</div>
+                        <div class="col-sm-6"><strong><i class="bi bi-trophy-fill text-lightblue"></i> 目標：</strong>中興大學資管系碩士、軟體工程師</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container my-4" style="min-height: 450px;">
+        <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                <div class="card p-4 bg-white mb-4">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-3"><i class="bi bi-person-lines-fill"></i> 自我介紹 (About Me)</h4>
+                    <p class="lh-lg mb-0">
+                        我是陳虹華，目前就讀於國立聯合大學資訊管理學系二年級。我熱衷於透過程式編碼解決實際生活中的問題，求學期間主要專注於 Android App 開發與後端資料庫系統的整合應用。除了技術的精進，我也積極投入志工服務，擔任聯大偏鄉課輔的大學伴與帶班現場技術後援，運用自身所學縮短數位落差。在課業與專案開發中，我具備良好的邏輯思考與統計分析能力，能將數據思維融入系統架構設計。我的目標是持續深耕全端網頁與行動應用的開發領域。
+                    </p>
+                </div>
+                <div class="card p-4 bg-white">
+                    <div class="text-center mb-4">
+                        <small class="text-uppercase fw-bold text-lightblue opacity-75" style="letter-spacing: 2px;">EDUCATION</small>
+                        <h3 class="fw-bold text-dark mt-1">教育背景</h3>
+                        <div class="d-flex align-items-center justify-content-center my-3">
+                            <div style="flex: 1; height: 1px; background-color: #e0e0e0; max-width: 150px;"></div>
+                            <i class="bi bi-circle-fill mx-3 text-lightblue" style="font-size: 0.5rem;"></i>
+                            <div style="flex: 1; height: 1px; background-color: #e0e0e0; max-width: 150px;"></div>
+                        </div>
+                    </div>
+                    <div class="position-relative ps-4 ms-2 my-2" style="border-left: 2px solid #e3f2fd;">
+                        <div class="position-relative mb-4 pb-2">
+                            <span class="position-absolute bg-white text-lightblue" style="left: -30px; top: 2px; padding: 2px 0;">
+                                <i class="bi bi-circle-fill" style="font-size: 0.6rem;"></i>
+                            </span>
+                            <div class="timeline-content">
+                                <span class="fw-bold text-lightblue small">2024 — 至今</span>
+                                <h6 class="fw-bold text-dark mt-1 mb-2">國立聯合大學 ‧ 資訊管理學系</h6>
+                                <p class="text-muted small mb-0 lh-base" style="max-width: 600px;">
+                                    <strong class="text-secondary">重要修習課程：</strong><br>
+                                    程式設計、資料庫管理、人工智慧程式設計、前端網頁程式設計、應用系統程式設計。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <span class="position-absolute bg-white text-lightblue" style="left: -30px; top: 2px; padding: 2px 0;">
+                                <i class="bi bi-circle-fill" style="font-size: 0.6rem;"></i>
+                            </span>
+                            <div class="timeline-content">
+                                <span class="fw-bold text-lightblue small">2021 — 2024</span>
+                                <h6 class="fw-bold text-dark mt-1 mb-0">彰化縣立和美高級中學 - 普通科</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-experience" role="tabpanel">
+                <div class="card p-4 bg-white mb-4">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-3"><i class="bi bi-briefcase-fill"></i> 實務經驗與實習 (Experience)</h4>
+                    <div class="ps-2">
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-dark mb-1">教育部數位學伴計畫 - 大學伴 & 系統帶班</h6>
+                            <p class="text-muted small mb-2">2025.09 - 2026.06</p>
+                            <p class="small text-secondary mb-0"><strong>角色與貢獻：</strong>負責為偏鄉國中小學生進行一對一遠距教學；擔任帶班現場技術後援，即時排除大學伴遠距系統與硬體障礙。</p>
+                            <p class="small text-secondary"><strong>習得技能：</strong>將複雜知識轉化為易懂語言，具備客製化數位教材與線上引導能力；展現第一線障礙排除與緊急應變能力。</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-dark mb-1">資訊志工</h6>
+                            <p class="text-muted small mb-2">2026.04 - 2026.06</p>
+                            <p class="small text-secondary mb-0"><strong>角色與貢獻：</strong>協助國小學生學習 Scratch 程式設計，培養邏輯思考能力。</p>
+                            <p class="small text-secondary"><strong>習得技能：</strong>引導建立條件判斷與迴圈等核心思維，展現將抽象科技概念轉化為具象語言的溝通與教學科技引導力。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-4 bg-white">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-4"><i class="bi bi-code-slash"></i> 專業技能 (Skills)</h4>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-secondary mb-3">程式語言 & 網頁開發</h5>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>C++</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>Java (Android Studio)</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>HTML / CSS / Bootstrap</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>PHP (全端整合)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-secondary mb-3">資料庫 & 網路技術</h5>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>MariaDB</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-dot text-lightblue fs-4 lh-1 me-1"></i>
+                                    <span>Cisco Packet Tracer (VLAN)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-projects" role="tabpanel">
+                <div class="card p-4 bg-white mb-4">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-4"><i class="bi bi-collection-fill"></i> 專案作品 (Projects)</h4>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm border">
+                                <img src="images/final_project.jpg" class="card-img-top" alt="甜點訂購管理系統">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">甜點訂購管理系統</h5>
+                                    <p class="card-text text-muted small">整合 HTML/CSS/Bootstrap 前端與 PHP/MariaDB 資料庫連線管理應用，結合點選控制邏輯優化。具備管理員新增商品，商品列表自動刷新功能。</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 pb-3">
+                                    <span class="badge border border-secondary text-secondary fw-normal me-2">HTML/CSS/Bootstrap</span>
+                                    <span class="badge border border-secondary text-secondary fw-normal me-2">PHP</span>
+                                    <span class="badge border border-secondary text-secondary fw-normal">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-4 bg-white">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-4"><i class="bi bi-images"></i> 參與活動照片 (Gallery)</h4>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card border h-100">
+                                <div class="ratio ratio-4x3">
+                                    <img src="images/google.jpg" class="card-img-top object-fit-cover" alt="企業參訪照片">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="fw-bold mb-1">Google Taiwan 企業參訪與交流</h6>
+                                    <p class="card-text text-muted small">參訪 Google 臺灣 Android 部門，深度學習跨國科技公司的文化與團隊高效溝通模式。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border h-100">
+                                <div class="ratio ratio-4x3">
+                                    <img src="images/相見歡.jpg" class="card-img-top object-fit-cover" alt="偏鄉服務照片">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="fw-bold mb-1">教育部數位學伴計畫相見歡活動</h6>
+                                    <p class="card-text text-muted small">參與教育部數位學伴計畫實體交流，以圖片記錄與小學伴跟大學伴從相識到相熟的熱絡過程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-articles" role="tabpanel">
+                <div class="card p-4 bg-white">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-4"><i class="bi bi-journal-text"></i> 專業見解與心得 (Articles)</h4>
+                    <img src="images/google.jpg" class="img-fluid rounded d-block mx-auto mb-3" alt="企業參訪照片" style="max-width: 400px; height: auto;">
+                    <div class="border p-3 rounded mb-3 bg-light">
+                        <h5 class="fw-bold text-dark">企業參訪心得：跨國科技公司與本土企業的文化思辨</h5>
+                        <p class="text-muted small mb-2"><i class="bi bi-calendar3"></i> 2025年12月 | 分類：企業實務參訪</p>
+                        <p class="lh-lg card-text mb-2">
+                            參訪 Google 臺灣 Android 部門後，深入了解了跨國企業在運行上流程。相較於本土企業傳統的決策模式，外商的高度自主性與彈性文化令我印象深刻。這也激勵我除了精進本科學術技術，更應同步培養良好的團隊溝通與跨領域整合能力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-awards" role="tabpanel">
+                <div class="card p-4 bg-white">
+                    <h4 class="fw-bold text-lightblue border-bottom pb-2 mb-3"><i class="bi bi-trophy-fill"></i> 獲獎與榮譽 (Awards)</h4>
+                    <img src="images/english.jpg" class="img-fluid rounded d-block mx-auto mb-3" alt="聯大英文單字接龍比賽" style="max-width: 400px; height: auto;">
+                    <ul class="list-group list-group-flush border rounded shadow-sm">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong class="text-dark">聯大英文單字接龍 - 第三名</strong>
+                                <div class="text-muted small">在 2024 年的校內英文單字接龍比賽中獲得第三名</div>
+                            </div>
+                            <span class="badge bg-lightblue text-dark rounded-pill">2024</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row gy-4 text-start">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">Portfolio.</h2>
+                </div>
+                <div class="col-md-6 text-start">
+                    <h6 class="text-uppercase fw-bold mb-3 text-white-50" style="letter-spacing: 1px;">CONTACT ME</h6>
+                    <ul class="list-unstyled mb-0 small lh-lg opacity-75">
+                        <li><strong>Email・</strong> <a href="mailto:a0984466998@gmail.com" class="text-white text-decoration-none">a0984466998@gmail.com</a></li>
+                        <li><strong>Phone・</strong> 0984466998</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25 bg-white">
+            <div class="text-center">
+                <small class="opacity-50">國立聯合大學 資訊管理學系 前端網頁期末專案 | 指導教授：沈俊宏 老師</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
